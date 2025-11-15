@@ -1,18 +1,92 @@
+/* ======================================= */
+/* CSS: Giao diện Sáng (Sleek Light Mode) */
+/* ======================================= */
+:root {
+    --primary-blue: #007bff;
+    --success-green: #28a745;
+    --warning-yellow: #ffc107;
+    --info-cyan: #17a2b8;
+    --bg-light: #f0f2f5;
+    --card-light: #ffffff;
+    --text-dark: #343a40;
+    --border-grey: #e9ecef;
+}
 body {
-    font-family: Arial;
-    padding: 20px;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.container { max-width: 1000px; }
+
+header h1 {
+    font-weight: 800;
+    color: var(--primary-blue);
+    text-align: center;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--border-grey);
 }
 
-input, button {
-    padding: 8px;
-    margin: 5px 0;
+.card {
+    background-color: var(--card-light);
+    border: 1px solid var(--border-grey);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+.card-header, .modal-header {
+    border-radius: 12px 12px 0 0 !important;
 }
 
-table {
-    margin-top: 20px;
-    border-collapse: collapse;
+.task-item {
+    padding: 18px;
+    margin-bottom: 12px;
+    background-color: var(--card-light);
+    border-radius: 10px;
+    border-left: 5px solid var(--primary-blue);
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+.task-item:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+.task-item.completed {
+    border-left-color: var(--success-green);
+    opacity: 0.8;
+    background-color: #f8f9fa;
 }
 
-th, td {
-    padding: 10px;
+.task-title {
+    font-weight: 600;
+    color: var(--text-dark);
+    font-size: 1.15rem;
+}
+.task-meta {
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+.action-btn {
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    font-size: 16px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.btn-brand-primary {
+    background-color: #6f42c1;
+    border-color: #6f42c1;
+    color: white;
+}
+.btn-brand-primary:hover {
+    background-color: #59359e;
+    border-color: #59359e;
+}
+/* thêm class cho modal header (trước dùng bg-brand-primary nhưng chưa có) */
+.bg-brand-primary {
+    background-color: #6f42c1 !important;
+    color: #fff;
 }
