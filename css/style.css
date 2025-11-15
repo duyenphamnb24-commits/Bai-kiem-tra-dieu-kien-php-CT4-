@@ -1,7 +1,4 @@
-/* ======================================= */
-/* CSS: Giao diện Sáng (Sleek Light Mode) */
-/* ======================================= */
-:root {
+.root {
     --primary-blue: #007bff;
     --success-green: #28a745;
     --warning-yellow: #ffc107;
@@ -85,7 +82,7 @@ header h1 {
     background-color: #59359e;
     border-color: #59359e;
 }
-/* thêm class cho modal header (trước dùng bg-brand-primary nhưng chưa có) */
+
 .bg-brand-primary {
     background-color: #6f42c1 !important;
     color: #fff;
